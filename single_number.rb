@@ -32,3 +32,22 @@ def single_number(nums)
     end
     return no_duplicate.pop
 end
+
+
+Using Hashtable.. to debug
+require 'pry'
+def single_number(nums)
+    hash_table = {}
+    for num in nums
+        begin
+            binding.pry
+            hash_table.delete(num)
+            if nil
+        rescue
+            hash_table[num] = 1
+        end
+    end
+    # return hash_table.fetch(0)
+end
+
+single_number([2,2,1, 5, 5, 8, 8])
