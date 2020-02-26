@@ -17,4 +17,4 @@ def reverse_string(s)
     end
 end
 
-puts reverse_string(["h","e","l"])
+puts reverse_string(["h","e","l", "o", "o"])

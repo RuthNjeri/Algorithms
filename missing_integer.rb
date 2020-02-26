@@ -8,34 +8,28 @@
 
 require 'pry'
 
-a = [-1, -3, 90000, 2882939, 8, 7, 5, 3]
+# a = [-1, -3, 90000, 2882939, 8, 7, 5, 3]
 
 def solution(a)
-  positive_numbers = []
 
-  a.each do |item|
-    if item > 0
-      positive_numbers.push(item)
-    end
-  end
-  missing_positive(positive_numbers)
-end
-
-def missing_positive(positive_numbers)
-  if positive_numbers.size > 0
-    ordered_array = positive_numbers.sort.uniq
+  if a.size > 0
+    ordered_array = a.sort.uniq
     min = 1
+
     for num in ordered_array
-      if num == min
-        min += 1
+      if num > 0
+        if num == min
+          min += 1
+        end
       else
-        return min
+        return 1
       end
     end
-  else
-    return 1
+
+  return min
   end
 end
 
 
-print solution(a)
+
+print solution([1, 3, 6, 4, 1, 2])
