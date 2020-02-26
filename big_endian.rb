@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 # def solution(binary)
 #     counter = 0
@@ -19,19 +20,18 @@
 # print solution("0110")
 
 def solution(binary)
-    counter = 0
-    decimal = binary.to_i(2)
+  counter = 0
+  decimal = binary.to_i(2)
 
-    while decimal != 0
-        if (decimal % 2) == 0 # even
-            decimal = decimal / 2
-            counter += 1
-        else   # odd
-            decimal = decimal - 1
-            counter += 1
-        end
+  while decimal != 0
+    if decimal.even? # even
+      decimal /= 2
+    else # odd
+      decimal -= 1
+      counter += 1
     end
-    return counter
+  end
+  counter
 end
 
-print solution("011100")
+print solution('011100')

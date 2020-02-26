@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 # def solution(num)
 #     if num < 10
@@ -13,19 +14,15 @@
 
 # print solution(1)
 
-
 def solution_2(num)
-    if num < 10
-        return 0
-    end
+  return 0 if num < 10
 
-    tens_power = Math.log10(num).to_i
-    first_digit = num.digits[-1]
+  tens_power = Math.log10(num).to_i
+  first_digit = num.digits[-1]
 
-    smallest_num = first_digit * (10**tens_power)
+  smallest_num = first_digit * (10**tens_power)
 
-    return smallest_num
-
+  smallest_num
 end
 
 print solution_2(10)

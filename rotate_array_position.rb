@@ -14,14 +14,12 @@ def rotate_arr(arr, k)
     rotation += 1
   end
 
-
   while current_index < temp_arr.size
     arr.push(temp_arr[current_index])
     current_index += 1
   end
 
-  return arr
-
+  arr
 end
 
-print rotate_arr([-1,-100,3,99], 2)
+print rotate_arr([-1, -100, 3, 99], 2)
